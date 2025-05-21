@@ -1,0 +1,1 @@
+/usr/bin/c++   -pthread   CMakeFiles/app.dir/src/math/arth.cpp.o CMakeFiles/app.dir/src/alert/alert.cpp.o CMakeFiles/app.dir/src/main.cpp.o  -o app 
