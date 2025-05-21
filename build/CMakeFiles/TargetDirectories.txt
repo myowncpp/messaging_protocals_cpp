@@ -1,0 +1,9 @@
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/rebuild_cache.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/coverage.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/buildall.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/buildtest.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/cleanall.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/buildapp.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/edit_cache.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/utest.dir
+/data1/cpp_projects/cpp_unit_test/build/CMakeFiles/app.dir

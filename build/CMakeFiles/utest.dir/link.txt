@@ -1,0 +1,1 @@
+/usr/bin/c++   -pthread   CMakeFiles/utest.dir/src/math/arth.cpp.o CMakeFiles/utest.dir/src/alert/alert.cpp.o CMakeFiles/utest.dir/src/math/arth_test.cpp.o CMakeFiles/utest.dir/src/alert/alert_test.cpp.o CMakeFiles/utest.dir/test/test.cpp.o  -o utest  -lgtest -lgmock -lgtest_main 
