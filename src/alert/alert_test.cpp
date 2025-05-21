@@ -2,26 +2,22 @@
 #include <gmock/gmock.h>
 #include "alert.hpp"
 
-class MockPrintMessage {
-private:
-    std::string message;
-    
+class MockPrintMessage : public IMessagePrinter {
 public:
-    void print_message(const char* _message) {
-        message = _message;
-    }
-
-    const std::string& return_message() {
-        return message;
-    }
+    MOCK_METHOD(void, print_message, (const char* message), (override));
 };
 
 TEST(AlertTest, lowTempAlert) {
-    MockPrintMessage mockPrint;
-    ReportTempAlert repTempAlrt(15.0, 45.0, [&](const char* msg) {
-        mockPrint.print_message(msg);
-    });
+    MockPrintMessage mockPrinter;
+    ReportTempAlert repTempAlrt(15.0, 45.0, &mockPrinter);
 
+    EXPECT_CALL(mockPrinter, print_message(testing::StrEq("Alert!: Low temperature detected"))).Times(1);
     repTempAlrt.report_temp_alert(12.5);
-    ASSERT_EQ(mockPrint.return_message(), "Alert!: Low temparature detected");
+
+    EXPECT_CALL(mockPrinter, print_message(testing::StrEq("Alert!: High temperature detected"))).Times(1);
+    repTempAlrt.report_temp_alert(48.5);
+
+    // Expect that the alert printer is NOT called
+    EXPECT_CALL(mockPrinter, print_message(::testing::_)).Times(0);
+    repTempAlrt.report_temp_alert(28.5);
 }

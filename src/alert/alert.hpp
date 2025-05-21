@@ -3,16 +3,17 @@
 
 #include <iostream>
 #include <functional>
+#include "alert_interface.hpp"
 
 class ReportTempAlert {
 private:
     float tempClss;
     float lowTempThrdClss;
     float highTempThrdClss;
-    std::function<void(const char*)> printMessage;
+    IMessagePrinter* printer;
 
 public:
-    ReportTempAlert(float _lowTempThrdClss, float _highTempThrdClss, std::function<void(const char*)> fp);
+    ReportTempAlert(float _lowTempThrdClss, float _highTempThrdClss, IMessagePrinter* _printer);
     void report_temp_alert(float _tempClss);
 };
 

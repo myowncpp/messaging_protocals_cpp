@@ -7,7 +7,8 @@ int main() {
     sum = Arth_u16Addition_u8u8(50, 24);
     std::cout << "Sum of (50, 24) = " << sum << std::endl;
 
-    ReportTempAlert repTempAlrt(15.0, 45.0, &print_message);
+    conslePrinter printer;
+    ReportTempAlert repTempAlrt(15.0, 45.0, &printer);
     repTempAlrt.report_temp_alert(5.0);
 
     return 0;
