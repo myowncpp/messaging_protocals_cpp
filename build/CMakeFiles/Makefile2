@@ -105,8 +105,8 @@ CMakeFiles/coverage.dir/clean:
 # Target rules for target CMakeFiles/buildall.dir
 
 # All Build rule for target.
-CMakeFiles/buildall.dir/all: CMakeFiles/buildapp.dir/all
 CMakeFiles/buildall.dir/all: CMakeFiles/coverage.dir/all
+CMakeFiles/buildall.dir/all: CMakeFiles/buildapp.dir/all
 	$(MAKE) -f CMakeFiles/buildall.dir/build.make CMakeFiles/buildall.dir/depend
 	$(MAKE) -f CMakeFiles/buildall.dir/build.make CMakeFiles/buildall.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data1/cpp_projects/cpp_unit_test/build/CMakeFiles --progress-num=5 "Built target buildall"
